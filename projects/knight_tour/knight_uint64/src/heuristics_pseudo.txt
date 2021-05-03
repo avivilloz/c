@@ -1,0 +1,53 @@
+Pseudo Code Heuristics
+
+->create lut of [64][8], for each position the lut will have 8 possible 
+directions, and if the direction is out of boundary we store -1 in the 
+end of the array so that all -1 will be at the end.
+
+PrepareAvailablePositions(buffer)
+{
+	->go through the lut's possible directions for the current position and 
+check if they are available and how many are available, while the direction 
+is not -1 or "i" is different than number of directions (8). Each available 
+position (and also its number of available positions) will be stored in the 
+struct of the current buffer's index. 
+
+	->sort buffer according to number of directions available. 
+
+	->return number of available positions 
+}
+
+FindPath(
+	board, 
+	position, 
+	steps[BOARD_SIZE], 
+	step,
+	start_time
+)
+{
+	->set position in the board to busy.
+
+	if (->is not EndOfBoard)
+	{
+		->create buffer_of_structs that hold the postion and the number of 
+available positions from the position.
+
+		size = PrepareAvailablePositions(buffer_of_structs);
+
+		for (; i < size && status != SUCCESS; ++i)
+		{
+			status = FindPath(board, buffer[i], steps, step + 1, ticime);
+		}
+
+		if (SUCCESS == status)
+		{
+			->update steps array
+		}
+	
+		return status;
+	}
+
+	->update steps array
+
+	return SUCCESS;
+}
