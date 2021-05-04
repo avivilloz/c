@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Bits Array - Infinity Labs R&D 
-Group: Ol91
+Title: Bits Array
 Author:	Aviv
-Reviewer: Lisa
 Description: Bits array data structure for 64 bit architecture 
 ****************************************************************************/
 
@@ -144,8 +142,3 @@ bitsarr_t BitsArrMirror(bitsarr_t bit_array)
 
 	return result;
 }
-
-
-
-
-

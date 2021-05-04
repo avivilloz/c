@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Scheduler Heap - Infinity Labs R&D 
-Group: Ol91
+Title: Scheduler Heap
+Author: Aviv Illoz
 Description: Scheduler Heap interface header file
 *****************************************************************************/
 
-#ifndef __SCHEDULER_INFITY_OL_91__
-#define __SCHEDULER_INFITY_OL_91__
+#ifndef __SCHEDULER_H__
+#define __SCHEDULER_H__
 
 #include <time.h>   	/* time_t */
 #include <stddef.h> 	/* size_t */
@@ -112,4 +112,4 @@ Error:	        Scheduler has no stop task / is empty.
 
 int SchedulerRun(scheduler_t *scheduler);
 
-#endif /*__SCHEDULER_INFITY_OL_91*/
+#endif /*__SCHEDULER_H__*/

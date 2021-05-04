@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Bits Array - Infinity Labs R&D 
-Group: Ol91
+Title: Bits Array
+Author: Aviv Illoz
 Description: Bits array data structure for 64 bit architecture 
 ****************************************************************************/
 
-#ifndef __BIT_ARRAY_ILRD_OL91__
-#define __BIT_ARRAY_ILRD_OL91__
+#ifndef __BIT_ARRAY__
+#define __BIT_ARRAY__
 
 #include <stddef.h>	/* size_t */
 
@@ -55,10 +55,4 @@ void BitsArrToString(bitsarr_t bit_array, char *dest);
 /* Mirror the bit_array */
 bitsarr_t BitsArrMirror(bitsarr_t bit_array);
 
-#endif /* __BIT_ARRAY_ILRD_OL91__ */
-
-
-
-
-
-
+#endif /* __BIT_ARRAY__ */

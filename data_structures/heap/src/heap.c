@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Heap - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Igor
+Title: Heap
+Author: Aviv Illoz
 Description: Heap API
 *****************************************************************************/
 

@@ -1,13 +1,12 @@
 /****************************************************************************
-Title: Sorted List - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Sebastian
+Title: Sorted List
+Author: Aviv Illoz
 Description: Sorted list interface
 ****************************************************************************/
 
 #include <stdio.h>		/* printf */
 #include "sorted_list.h"	/* api */
+
 #define DATA_SIZE 5
 
 static int SortedListCmpInts(const void *iter, const void *data)

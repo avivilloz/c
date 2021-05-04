@@ -1,8 +1,6 @@
 /*******************************************************************************
-* Title: Queue - Infinity Labs R&D 
-* Group: Ol91
-* Author: Aviv
-* Reviewer: Ezequiel
+* Title: Queue
+* Author: Aviv Illoz
 * Description: Queue interface
 *******************************************************************************/
 
@@ -109,5 +107,3 @@ void QAppend(queue_t *dest, queue_t *src)
 }
 
 /******************************************************************************/
-
-

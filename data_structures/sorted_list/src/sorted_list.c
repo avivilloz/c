@@ -1,14 +1,13 @@
 /****************************************************************************
-Title: Sorted List - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Sebastian
+Title: Sorted List
+Author: Aviv Illoz
 Description: Sorted list interface
 ****************************************************************************/
 
 #include <stdio.h>		/* printf */
 #include <assert.h>		/* assert */
 #include <stdlib.h>		/* malloc, free */
+
 #include "dlist.h"		/* api */
 #include "sorted_list.h"	/* api */
 
@@ -282,8 +281,3 @@ void SortedListMerge(sorted_list_t *dest, sorted_list_t *src)
 		DListSplice(from, to, runner1);
 	}
 }
-
-
-
-
-

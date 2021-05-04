@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: PriorityQueue - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: David
+Title: PriorityQueue
+Author: Aviv Illoz
 Description: Priority Queue interface header file
 *****************************************************************************/
 
@@ -89,4 +87,3 @@ int main(void)
 	
 	return 0;
 }
-

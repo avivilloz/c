@@ -1,13 +1,12 @@
 /****************************************************************************
-Title: Dlist - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Igor
+Title: Dlist
+Author: Aviv Illoz
 Description: Doubly Linked list interface
 ****************************************************************************/
 
 #include <stdio.h>	/* printf */
 #include "dlist.h"	/* api */
+
 #define DATA_SIZE 6
 
 /**************************************************************************/

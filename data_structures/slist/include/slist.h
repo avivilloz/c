@@ -1,13 +1,13 @@
 /****************************************************************************
-Title: Slist - Infinity Labs R&D 
-Group: Ol91
+Title: Slist
+Author: Aviv Illoz
 Description: Dynamic Linked List interface
 ****************************************************************************/
 
-#include <stddef.h>	/*size_t*/
+#ifndef __SINGLY_LINKED_LIST_H__
+#define __SINGLY_LINKED_LIST_H__
 
-#ifndef __DYNAMIC_Llist_H_ILRD_OL91__
-#define __DYNAMIC_Llist_H_ILRD_OL91__
+#include <stddef.h>	/*size_t*/
  
 typedef struct slist slist_t; 
 typedef struct slist_node slist_node_t;
@@ -141,7 +141,4 @@ int SListForEach(
 
 void SListAppend(slist_t *dest, slist_t *src);
 
-#endif
-
-
-
+#endif /* __SINGLY_LINKED_LIST_H__ */

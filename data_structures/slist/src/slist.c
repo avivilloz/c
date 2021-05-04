@@ -1,13 +1,12 @@
 /*******************************************************************************
-* Title: Slist - Infinity Labs R&D 
-* Group: Ol91
-* Author: Aviv
-* Reviewer: Miriam
+* Title: Slist
+* Author: Aviv Illoz
 * Description: Dynamic Linked List interface
 ********************************************************************************/
 
 #include <stdlib.h>	/*malloc, free*/
 #include <assert.h>	/*assert*/
+
 #include "slist.h"	/*api*/
 
 struct slist_node
@@ -297,6 +296,3 @@ void SListAppend(slist_t *dest, slist_t *src)
 	src->head->next = NULL;
 	src->tail = src->head;
 }
-
-
-

@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Stack - Infinity Labs R&D 
-Group: Ol91
+Title: Stack
+Author: Aviv Illoz
 Description: Stack interface
 ****************************************************************************/
 
-#ifndef __STACK_H_ILRD_OL91__
-#define __STACK_H_ILRD_OL91__
+#ifndef __STACK_H__
+#define __STACK_H__
 
 #include <stddef.h> 	/* size_t */
 
@@ -86,5 +86,4 @@ Error proccessing: 	-
 
 size_t StackCapacity(const stack_t *stack); 
 
-#endif	/*__STACK_H_ILRD_OL91__*/
-
+#endif	/*__STACK_H__*/

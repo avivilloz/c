@@ -1,11 +1,11 @@
-/****************************************************************************
-Title: PriorityQueue - Infinity Labs R&D 
-Group: Ol91
+/***************************************************************************
+Title: PriorityQueue
+Author: Aviv Illoz
 Description: Priority Queue interface header file
 *****************************************************************************/
 
-#ifndef __PQ_INFITY_OL_91__
-#define __PQ_INFITY_OL_91__
+#ifndef __PQ_H__
+#define __PQ_H__
 
 #include <stddef.h>     	/* typedef & size_t */
 #include "sorted_list.h"	/* api */
@@ -94,5 +94,4 @@ void *PQErase(pq_t *pq, int(*is_match)(const void *data, const void *params), vo
 
 sorted_list_t *PQToSortedList(pq_t *pq);
 
-#endif /*__PQ_INFITY_OL_91*/
-
+#endif /*__PQ_H__*/

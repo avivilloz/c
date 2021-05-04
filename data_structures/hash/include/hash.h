@@ -1,10 +1,11 @@
 /****************************************************************************
-Title: Hash Table- Infinity Labs R&D 
-Group: OL91
+Title: Hash Table
+Author: Aviv Illoz
 Description: Hash Table API
 *****************************************************************************/
-#ifndef __HASH_TABLE_ILRD_OL91__
-#define __HASH_TBLE_RECURSIVE_ILRD_OL91__
+
+#ifndef __HASH_TABLE_H__
+#define __HASH_TABLE_H__
 
 #include <stddef.h>	/* size_t */
 
@@ -112,4 +113,4 @@ Time complexity: O(n+m)
 double HTLoadFactor(const hash_t *table);
 double HTStandardDeviation(const hash_t *table);
 
-#endif /*__HASH_TABLE_ILRD_OL91__*/
+#endif /*__HASH_TABLE_H__*/

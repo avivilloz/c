@@ -1,13 +1,14 @@
 /****************************************************************************
-Title: Sorted List - Infinity Labs R&D 
-Group: Ol91
+Title: Sorted List
+Author: Aviv Illoz
 Description: Sorted list interface
 ****************************************************************************/
 
+#ifndef __SORTED_LIST_H__
+#define __SORTED_LIST_H__
+
 #include <stddef.h>     /* typedef & size_t */
 #include "dlist.h"	/* api */
-#ifndef __SORTED_LIST_LIST_H_ILRD_OL91__
-#define __SORTED_LIST_LIST_H_ILRD_OL91__
 
 /*
 struct sorted_list
@@ -250,11 +251,4 @@ Time complexity:	O(n)
 
 void SortedListMerge(sorted_list_t *dest, sorted_list_t *src);
 
-
-
-#endif /* __SORTED_LIST_LIST_H_ILRD_OL91__ */
-
-
-
-
-
+#endif /* __SORTED_LIST_H__ */

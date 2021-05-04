@@ -1,14 +1,13 @@
 /****************************************************************************
-Title: Stack - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Nathan
+Title: Stack
+Author: Aviv Illoz
 Description: Stack API
 *****************************************************************************/
 
 #include <stdlib.h>	/* malloc */
 #include <assert.h>	/* assert */
 #include <stddef.h> 	/* size_t */
+
 #include "stack.h"	/* api */
 
 struct stack
@@ -94,4 +93,3 @@ size_t StackCapacity(const stack_t *stack)
 	assert(NULL != stack);
 	return stack->capacity;
 }
-

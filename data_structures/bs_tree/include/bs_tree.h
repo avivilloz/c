@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Binary Sorted Tree - Infinity Labs R&D 
-Group: OL91
+Title: Binary Sorted Tree
+Author: Aviv Illoz
 Description: Binary Sorted Tree API
 *****************************************************************************/
 
-#ifndef __BS_TREE_ILRD_OL91__
-#define __BS_TREE_ILRD_OL91__
+#ifndef __BS_TREE__
+#define __BS_TREE__
 
 #include <stddef.h>	/* size_t */
 
@@ -183,5 +183,4 @@ int BSTForEach(
 
 /*****************************************************************************/
 
-#endif /*__BS_TREE_ILRD_OL91__*/
-
+#endif /*__BS_TREE__*/

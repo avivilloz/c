@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Vector - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Igor
+Title: Vector
+Author: Aviv Illoz
 Description: Dynamic vector interface
 ****************************************************************************/
 

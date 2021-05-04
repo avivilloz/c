@@ -1,8 +1,7 @@
 /****************************************************************************
-Title: Dlist - Infinity Labs R&D 
+Title: Dlist
 Group: Ol91
-Author: Aviv
-Reviewer: Igor
+Author: Aviv Illoz
 Description: Doubly Linked list interface
 ****************************************************************************/
 
@@ -386,4 +385,3 @@ dlist_iter_t DListSplice(dlist_iter_t from, dlist_iter_t to, dlist_iter_t where)
 /*****************************************************************************/
 
 /* fix all functions to be simpler and use functions inside of functions */
-

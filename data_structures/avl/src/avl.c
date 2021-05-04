@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Binary Sorted Tree (Recursive) - Infinity Labs R&D 
-Group: OL91
+Title: Binary Sorted Tree (Recursive) 
 Author: Aviv
-Reviewer: Michail
 Description: Binary Sorted Tree (Recursive) API
 *****************************************************************************/
 
@@ -32,21 +30,9 @@ struct avl
 
 enum {SUCCESS, FAILURE};
 
-/*************************** MAIN STATIC FUNCS *******************************/
-/* Destroy */
-
 static void DestroyNodes(avl_node_t *iter);
-/* used in AVLRemove as well */
 static void Remove(avl_node_t *node);
-
-/************************************/
-/* Size */
-
 static size_t Count(avl_node_t *iter);
-
-/************************************/
-/* Insert */
-
 static avl_node_t *CreateNode(
 	void *data, 
 	size_t height,
@@ -66,45 +52,29 @@ static avl_node_t *FindAndInsert(
 	avl_node_t *new_node, 
 	void *data
 );
-/* all used in AVLRemove as well */
 static int IsBalanced(avl_node_t *node);
 static int CheckBalance(avl_node_t *lhs, avl_node_t *rhs);
 static avl_node_t *Balance(avl_node_t *node);
 static int GetCase(avl_node_t *node);
 static size_t UpdateHeight(avl_node_t *node);
 static size_t GetBiggestHeight(avl_node_t *node);
-
-/************************************/
-/* Remove */
-
 static avl_node_t *FindAndRemove(avl_t *tree, avl_node_t *iter, const void *data);
-/* used in AVLFind as well */
 static int IsMatch(
 	const void *lhs, 
 	const void *rhs, 
 	int (*is_before)(const void *lhs, const void *rhs)
 );
 static avl_node_t *UpdateChildrenAndRemove(avl_node_t *iter);
-
-/************************************/
-/* Find */
-
 static void *Find(
 	int (*is_before)(const void *lhs, const void *rhs),
 	avl_node_t *iter,
 	void *data
 );
-
-/************************************/
-/* ForEach */
-
 static int PerformAction(
 	avl_node_t *iter, 
 	int (*action)(void *data, void *params),
 	void *params
 );
-
-/************************* GENERAL STATIC FUNCS ******************************/
 
 static void SetRoot(avl_t *tree, avl_node_t *root)
 {
@@ -156,8 +126,6 @@ static int IsLeaf(avl_node_t *node)
 	return (NULL == node->children[LEFT] && NULL == node->children[RIGHT]);
 }
 
-/*****************************************************************************/
-
 avl_t *AVLCreate(int (*is_before)(const void *lhs, const void *rhs))
 {
 	avl_t *tree = NULL;
@@ -173,8 +141,6 @@ avl_t *AVLCreate(int (*is_before)(const void *lhs, const void *rhs))
 
 	return tree;
 }
-
-/*****************************************************************************/
 
 void AVLDestroy(avl_t *tree)
 {
@@ -205,8 +171,6 @@ static void Remove(avl_node_t *node)
 	node = NULL;
 }
 
-/*****************************************************************************/
-
 size_t AVLSize(const avl_t *tree)
 {	
 	assert(NULL != tree);
@@ -229,15 +193,11 @@ static size_t Count(avl_node_t *iter)
 	return Count(GetChild(iter, LEFT)) + Count(GetChild(iter, RIGHT)) + 1;
 }
 
-/*****************************************************************************/
-
 int AVLIsEmpty(const avl_t *tree)
 {
 	assert(NULL != tree);
 	return (NULL == tree->root);
 }
-
-/*****************************************************************************/
 
 int AVLInsert(avl_t *tree, void *data)
 {
@@ -411,8 +371,6 @@ static size_t GetBiggestHeight(avl_node_t *node)
 		GetHeight(left_child) : GetHeight(right_child);
 }
 
-/*****************************************************************************/
-
 void AVLRemove(avl_t *tree, const void *data)
 {
 	assert(NULL != tree);
@@ -503,8 +461,6 @@ static avl_node_t *UpdateChildrenAndRemove(avl_node_t *iter)
 	return iter;
 }
 
-/*****************************************************************************/
-
 size_t AVLHeight(const avl_t *tree)
 {
 	if (AVLIsEmpty(tree))
@@ -514,8 +470,6 @@ size_t AVLHeight(const avl_t *tree)
 
 	return tree->root->height;
 }
-
-/*****************************************************************************/
 
 void *AVLFind(const avl_t *tree, void *data)
 {
@@ -550,8 +504,6 @@ static void *Find(
 	
 	return Find(is_before, child, data);
 }
-
-/*****************************************************************************/
 
 int AVLForEach(
 	avl_t *tree,
@@ -593,5 +545,3 @@ static int PerformAction(
 
 	return check;
 }
-
-

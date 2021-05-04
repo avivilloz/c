@@ -1,8 +1,6 @@
 /*******************************************************************************
-* Title: Queue - Infinity Labs R&D 
-* Group: Ol91
-* Author: Aviv
-* Reviewer: Ezequiel
+* Title: Queue
+* Author: Aviv Illoz
 * Description: Queue interface
 ********************************************************************************/
 
@@ -78,5 +76,3 @@ int main(void)
 
 	return 0;
 }
-
-

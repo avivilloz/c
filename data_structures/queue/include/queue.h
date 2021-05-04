@@ -1,11 +1,12 @@
 /*******************************************************************************
-* Title: Queue - Infinity Labs R&D 
-* Group: Ol91
+* Title: Queue
+* Author: Aviv Illoz
 * Description: Queue interface
 ********************************************************************************/
 
-#ifndef __QUEUE_INFITY_OL_91__
-#define __QUEUE_INFITY_OL_91__
+#ifndef __QUEUE_H__
+#define __QUEUE_H__
+
 #include <stddef.h> 	/* size_t */
 #include "slist.h"	/* slist_iter_t */
 
@@ -81,5 +82,4 @@ Time complexity: 0(1)
 */
 void QAppend(queue_t *dest, queue_t *src);
 
-#endif /* __QUEUE_INFITY_OL_91__ */
-
+#endif /* __QUEUE_H__ */

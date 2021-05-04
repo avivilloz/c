@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Binary Sorted Tree (Recursive)- Infinity Labs R&D 
-Group: OL91
+Title: Binary Sorted Tree (Recursive)
+Author: Aviv Illoz
 Description: Binary Sorted Tree (Recursive) API
 *****************************************************************************/
 
-#ifndef __BS_TREE_RECURSIVE_ILRD_OL91__
-#define __BS_TREE_RECURSIVE_ILRD_OL91__
+#ifndef __BS_TREE_RECURSIVE__
+#define __BS_TREE_RECURSIVE__
 
 #include <stddef.h>  /* size_t */ 
 
@@ -106,7 +106,8 @@ void *AVLFind(const avl_t *tree, void *data);
 /*****************************************************************************/
 /*
 Decription: Performs a certain action for each node in the tree structure
-Input: Pointer to tree, function with action to perform, and parameter for the action function
+Input: Pointer to tree, function with action to perform, and parameter for the 
+action function
 Output: boolian value: 1 if failed, 0 if succeeded
 Error: - 
 Time complexity: O(3n)
@@ -120,5 +121,4 @@ int AVLForEach(
 
 /*****************************************************************************/
 
-#endif /*__BS_TREE_RECURSIVE_ILRD_OL91__*/
-
+#endif /*__BS_TREE_RECURSIVE__*/

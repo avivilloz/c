@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Binary Sorted Tree (Recursive) - Infinity Labs R&D 
-Group: OL91
+Title: Binary Sorted Tree (Recursive)
 Author: Aviv
-Reviewer: Michail
 Description: Binary Sorted Tree (Recursive) Test API
 *****************************************************************************/
 
@@ -24,12 +22,8 @@ Description: Binary Sorted Tree (Recursive) Test API
 				printf("%s: \33[5;1;32;1mSUCCESS\33[0m\n", #x);\
 			}
 
-/*****************************************************************************/
-
 enum {FALSE, TRUE};
 typedef enum {TEST_PASS, TEST_FAIL} test_status_t;
-
-/********************************* TESTS ************************************/
 
 static int IsBefore(const void *lhs, const void *rhs)
 {
@@ -63,7 +57,6 @@ static test_status_t CreateAndInsert(int array[], avl_t **tree)
 	expect(0 == AVLIsEmpty(*tree));
 	expect(10 == AVLSize(*tree));
 
-	/* after re-balancing (otherwise it would be 4) */
 	expect(3 == AVLHeight(*tree));
 
 	return TEST_PASS;
@@ -141,8 +134,6 @@ static test_status_t Test(void)
 	return TEST_PASS;
 }
 
-/*****************************************************************************/
-
 int main(void)
 {
 	int success = TRUE;
@@ -160,5 +151,3 @@ int main(void)
 
 	return 0;
 }
-
-

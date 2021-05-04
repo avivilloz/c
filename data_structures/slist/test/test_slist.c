@@ -1,9 +1,7 @@
 /*******************************************************************************
-* Title: Slist - Infinity Labs R&D 
-* Group: Ol91
-* Author: Aviv
-* Reviewer: Miriam
-* Description: Dynamic Linked List interface
+* Title: Slist
+* Author: Aviv Illoz
+* Description: Linked List interface
 ********************************************************************************/
 
 #include <stdio.h>	/* printf */

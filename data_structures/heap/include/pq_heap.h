@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: PQ Heap - Infinity Labs R&D 
-Group: OL91
+Title: PQ Heap
+Author: Aviv Illoz
 Description: PQ Heap API
 *****************************************************************************/
 
-#ifndef __PQ_INFITY_OL_91__
-#define __PQ_INFITY_OL_91__
+#ifndef __PQ_H__
+#define __PQ_H__
 
 #include <stddef.h>     /* typedef & size_t */
 #include "heap.h"	/* api */
@@ -93,4 +93,4 @@ Time Complexity: O(n)
 
 void *PQErase(pq_t *pq, is_match_t is_match, void *params);
 
-#endif /*__PQ_INFITY_OL_91*/
+#endif /*__PQ_H__*/

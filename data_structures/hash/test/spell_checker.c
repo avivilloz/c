@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Hash Table - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Miriam
+Title: Hash Table
+Author: Aviv Illoz
 Description: Hash Table Test API
 *****************************************************************************/
 

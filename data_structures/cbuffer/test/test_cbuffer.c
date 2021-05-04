@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Circular Buffer Test - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Nour
+Title: Circular Buffer Test
+Author: Aviv Illoz
 Description: Library of functions to implement a Circular Buffer.
 ****************************************************************************/
 

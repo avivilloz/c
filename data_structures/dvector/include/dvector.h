@@ -1,11 +1,12 @@
 /****************************************************************************
-Title: Vector - Infinity Labs R&D 
-Group: Ol91
+Title: Vector
+Author: Aviv Illoz
 Description: Dynamic vector interface
 ****************************************************************************/
 
-#ifndef __DYNAMIC_VECTOR_H_ILRD_OL91__
-#define __DYNAMIC_VECTOR_H_ILRD_OL91__
+#ifndef __DYNAMIC_VECTOR_H__
+#define __DYNAMIC_VECTOR_H__
+
 #include <stddef.h> 	/* size_t */
 
 /*struct vector
@@ -107,4 +108,4 @@ Error proccessing: 	returns 0 in case of succes, returns other value in case of 
 int VectorShrinkToFit(vector_t *vector);	
 
 
-#endif
+#endif /* */

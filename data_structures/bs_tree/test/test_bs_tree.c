@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Binary Sorted Tree - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Nathan
+Title: Binary Sorted Tree
+Author: Aviv Illoz
 Description: Binary Sorted Tree Test API
 *****************************************************************************/
 
@@ -167,5 +165,3 @@ int main(void)
 
 	return 0;
 }
-
-

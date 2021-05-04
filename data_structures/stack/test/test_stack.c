@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Stack - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Nathan
+Title: Stack
+Author: Aviv Illoz
 Description: Stack Test API
 *****************************************************************************/
 
@@ -110,4 +108,3 @@ int main(void)
 
 	return 0;
 }
-

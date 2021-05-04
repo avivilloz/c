@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Circular Buffer SRC- Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Nour
+Title: Circular Buffer
+Author: Aviv Illoz
 Description: Library of functions to implement a Circular Buffer.
 ****************************************************************************/
 
@@ -115,4 +113,3 @@ size_t CBFreeSpace(const cbuffer_t *c_buffer)
 }
 
 /****************************************************************************/
-

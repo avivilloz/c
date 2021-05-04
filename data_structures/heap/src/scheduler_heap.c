@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Scheduler Heap - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Igor
+Title: Scheduler Heap
+Author: Aviv Illoz
 Description: Scheduler Heap interface header file
 *****************************************************************************/
 

@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: PQ Heap - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Igor
+Title: PQ Heap
+Author: Aviv Illoz
 Description: PQ Heap API
 *****************************************************************************/
 

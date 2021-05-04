@@ -1,11 +1,12 @@
 /****************************************************************************
-Title: Llist - Infinity Labs R&D 
-Group: Ol91
+Title: Doubly Linked List
+Author: Aviv Illoz
 Description: Doubly Linked list interface
 ****************************************************************************/
 
-#ifndef __DOUBLY_LINKED_LIST_H_ILRD_OL91__
-#define __DOUBLY_LINKED_LIST_H_ILRD_OL91__
+#ifndef __DOUBLY_LINKED_LIST_H__
+#define __DOUBLY_LINKED_LIST_H__
+
 #include <stddef.h>     /* typedef */
 
 typedef struct dlist_node dlist_node_t;
@@ -252,6 +253,4 @@ dlist_iter_t DListSplice(dlist_iter_t from, dlist_iter_t to, dlist_iter_t where)
 
 /*****************************************************************************/
 
-#endif /* __DOUBLY_LINKED_LIST_H_ILRD_OL91__ */
-
-
+#endif /* __DOUBLY_LINKED_LIST_H__ */

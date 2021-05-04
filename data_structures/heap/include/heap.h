@@ -1,11 +1,11 @@
 /******************************************************************************
-Title: Heap - Infinity Labs R&D 
-Group: Ol91
+Title: Heap
+Author: Aviv Illoz
 Description: Heap interface
 ******************************************************************************/
 
-#ifndef __HEAP_OL91__
-#define __HEAP_OL91__
+#ifndef __HEAP_H__
+#define __HEAP_H__
 
 #include <stddef.h>	/* size_t */ 
 #include "dvector.h"
@@ -86,4 +86,4 @@ Time complexity:  O(N)
 */
 void *HeapRemove(heap_t *heap, is_match_t is_match, void *param);
 
-#endif /* __HEAP_OL91__ */
+#endif /* __HEAP_H__ */

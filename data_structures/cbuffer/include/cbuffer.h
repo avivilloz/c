@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Circular Buffer H File- Infinity Labs R&D 
-Group: Ol91
+Title: Circular Buffer
+Author: Aviv Illoz
 Description: Library of functions to implement a Circular Buffer.
 ****************************************************************************/
 
-#ifndef __CBUFFER_H_ILRD_OL91__
-#define __CBUFFER_H_ILRD_OL91__
+#ifndef __CBUFFER_H__
+#define __CBUFFER_H__
 
 #include <sys/types.h>     /* size_t, ssize_t */
 
@@ -72,5 +72,4 @@ Output: 0 if full or the quantity of space left if not full.
 
 size_t CBFreeSpace(const cbuffer_t *c_buffer);
 
-#endif	/*__CBUFFER_H_ILRD_OL91__*/
-
+#endif	/*__CBUFFER_H__*/
