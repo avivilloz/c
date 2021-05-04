@@ -1,5 +1,5 @@
-#ifndef __FSQ__
-#define __FSQ__
+#ifndef __FSQ_H__
+#define __FSQ_H__
 
 #include <stddef.h>
 
@@ -17,4 +17,4 @@ size_t FSQDequeue(fsq_t *fsq);
 
 void FSQEnqueue(fsq_t *fsq, size_t data);
 
-#endif
+#endif /* __FSQ_H__ */

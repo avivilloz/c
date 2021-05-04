@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Shuffle and Sort Dictionary - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer:
+Title: Shuffle and Sort Dictionary
+Author: Aviv Illoz
 Description: Shuffle and Sort Dictionary
 	argv[0] -> <executable> 
 	argv[1] -> <path to dict> 

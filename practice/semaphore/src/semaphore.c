@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Semaphore - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Nour
+Title: Semaphore
+Author: Aviv Illoz
 Description: Semaphore api
 ******************************************************************************/
 

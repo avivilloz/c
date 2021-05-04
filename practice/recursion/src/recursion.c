@@ -1,12 +1,11 @@
 /****************************************************************************
-Title: Recursion - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer:
+Title: Recursion
+Author: Aviv Illoz
 Description: Recursion API
 *****************************************************************************/
 
 #include <stdlib.h>	/* malloc */
+
 #include "recursion.h"	/* api */
 
 /*****************************************************************************/
@@ -227,4 +226,3 @@ char *Strstr(const char *haystack, const char *needle)
 
 	return NULL;
 }
-

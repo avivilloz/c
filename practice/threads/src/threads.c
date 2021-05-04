@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: 100K Threads - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Nathan
+Title: 100K Threads
+Author: Aviv Illoz
 Description: 100K Threads
 ******************************************************************************/
 

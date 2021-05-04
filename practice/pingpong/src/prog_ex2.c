@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Prog_ex2 Ping Pong - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: David
+Title: Prog_ex2 Ping Pong
+Author: Aviv Illoz
 Description: Prog_ex2 Ping Pong API
 ******************************************************************************/
 

@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Recursion - Infinity Labs R&D 
-Group: OL91
+Title: Recursion
+Author: Aviv Illoz
 Description: Recursion API
 *****************************************************************************/
 
-#ifndef _ILRD_OL91__
-#define _ILRD_OL91__
+#ifndef __RECURSION_H__
+#define __RECURSION_H__
 
 typedef struct node node_t;
 
@@ -75,5 +75,5 @@ char *Strstr(const char *haystack, const char *needle);
 
 /*****************************************************************************/
 
-#endif /*_ILRD_OL91__*/
+#endif /*__RECURSION_H__*/
 

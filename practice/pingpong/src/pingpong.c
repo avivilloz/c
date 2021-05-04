@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Ping Pong - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: David
+Title: Ping Pong
+Author: Aviv Illoz
 Description: Ping Pong API
 ******************************************************************************/
 

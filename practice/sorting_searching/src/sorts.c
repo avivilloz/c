@@ -1,14 +1,13 @@
 /****************************************************************************
-Title: Sorts - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Igor
+Title: Sorts
+Author: Aviv Illoz
 Description: Sorts API
 *****************************************************************************/
 
 #include <stdlib.h>	/* malloc, free */
 #include <string.h>	/* memmove */
 #include <assert.h>	/* assert */
+
 #include "sorts.h"	/* api */
 
 enum {NOT_FOUND = -1};

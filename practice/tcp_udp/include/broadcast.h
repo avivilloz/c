@@ -1,10 +1,11 @@
 /*****************************************************************************
 Title: broadcast
+Author: aviv illoz
 Description: broadcast api
 ******************************************************************************/
 
-#ifndef __ILRD_OL91_BROADCAST_H__
-#define __ILRD_OL91_BROADCAST_H__
+#ifndef __BROADCAST_H__
+#define __BROADCAST_H__
 
 #include "shared.h" /* macros and typedefs */
 
@@ -24,4 +25,4 @@ int BroadcastSetup(
 
 /*****************************************************************************/
 
-#endif /*__ILRD_OL91_BROADCAST_H__*/
+#endif /*__BROADCAST_H__*/

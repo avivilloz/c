@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Producer-Consumer - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Sebastian
+Title: Producer-Consumer
+Author: Aviv Illoz
 Description: Producer-Consumer Exercises
 List of Exit Values:
 	1-allocation fails
@@ -28,9 +26,7 @@ List of Exit Values:
 #include <errno.h>		/* perror */
 #include <string.h>		/* strlen */
 #include <unistd.h>		/* sleep */
-
 #include <pthread.h>	/* thread related functions */
-
 #include <fcntl.h>		/* for O_* constants */
 #include <sys/stat.h>	/* for mode constants */
 #include <semaphore.h>	/* for POSIX semahores */
@@ -204,7 +200,6 @@ int main(void)
 }
 
 /******************************* FUNCTIONS ***********************************/
-/* Ex1 */
 
 static test_status_t Ex1(void)
 {
@@ -263,24 +258,7 @@ static void *ReadEx1(void *param)
 	return param;
 }
 
-/* ex1 */
-
-/*->declare global variable as a "flag" to tell write and read threads when they can operate*/
-
-/*main()*/
-/*	->create write thread*/
-/*	->create read thread*/
-
-/*write()*/
-/*	->sping_lock checking if g_buffer is available*/
-/*	->write*/
-
-/*read()*/
-/*	->sping_lock to check if there is something to read in the g_buffer*/
-/*	->read*/
-
 /*****************************************************************************/
-/* Ex2  - 1 */
 
 static test_status_t Ex2(void)
 {
@@ -385,53 +363,7 @@ static void* ReadEx2(void *consumer_index)
 	return NULL;
 }
 
-/* Ex2  - 1 --> linked list + 1 mutex (consumers do while (is_not_empty)) */
-
-/*->define NUM_OF_PAIRS (how many producer/consumer pairs there will be)*/
-
-/*->declare pthread_mutex_t g_lock*/
-
-/*->declare list*/
-
-/*main()*/
-/*	->create declared list*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutex*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy list*/
-/*	->destroy mutex*/
-
-/*	->return success*/
-
-/*write()*/
-/*	->g_lock mutex*/
-/*	->write index of thread to list*/
-/*	->ung_lock mutex*/
-/*	->return*/
-
-/*read()*/
-/*	->while (1)*/
-/*		->g_lock mutex*/
-/*		->if list !is_empty*/
-/*			->read from list*/
-/*			->pop*/
-/*			->set on flag 'was_read'*/
-/*		->ung_lock mutex*/
-/*		->if was read*/
-/*			->use read data*/
-/*			->set flag 'was_read' off*/
-
 /*****************************************************************************/
-/* Ex2 - 2 */
 
 static test_status_t Ex2_2(void)
 {
@@ -537,51 +469,7 @@ static void* ReadEx2_2(void *consumer_index)
 	return NULL;
 }
 
-/* Ex2 - 2 --> linked list + 1 mutex + 1 semaphore */
-
-/*->define NUM_OF_PAIRS (how many producer/consumer pairs there will be)*/
-
-/*->declare pthread_mutex_t g_lock*/
-
-/*->declare list*/
-
-/*main()*/
-/*	->create declared list*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutex*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy list*/
-/*	->destroy mutex*/
-
-/*	->return success*/
-
-
-/*write()*/
-/*	->g_lock mutex*/
-/*	->write index of thread to list*/
-/*	->ung_lock mutex*/
-/*	->semaphore post*/
-/*	->return*/
-
-/*read()*/
-/*	->semaphore wait*/
-/*	->g_lock mutex*/
-/*	->read from list*/
-/*	->pop*/
-/*	->ung_lock mutex*/
-/*	->return*/
-
 /*****************************************************************************/
-/* Ex3 - 1 */
 
 static test_status_t Ex3(void)
 {
@@ -695,53 +583,7 @@ static void* ReadEx3(void *consumer_index)
 	return NULL;
 }
 
-/* Ex3 - 1 --> FSQ + 1 mutex + 2 semaphore - one thread at a time */
-
-/*->declare FSQ*/
-
-/*->start producer semaphore from size of the FSQ*/
-/*->start consumer semaphore from 0*/
-
-/*->declare pthread_mutex_t g_lock*/
-
-/*main()*/
-/*	->create declared queue*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutex*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy queue*/
-/*	->destroy mutex*/
-
-/*	->return success*/
-
-/*write()*/
-/*	->producer semaphore wait*/
-/*	->g_lock mutex*/
-/*	->write index of thread to queue*/
-/*	->ung_lock mutex*/
-/*	->consumer semaphore post*/
-/*	->return*/
-
-/*read()*/
-/*	->consumer semaphore wait*/
-/*	->g_lock mutex*/
-/*	->read from queue i.e print which consumer is consumming which product*/
-/*	->pop*/
-/*	->ung_lock mutex*/
-/*	->producer semaphore post*/
-/*	->return*/
-
 /*****************************************************************************/
-/* Ex3 - 2 */
 
 static test_status_t Ex3_2(void)
 {
@@ -855,54 +697,7 @@ static void* ReadEx3_2(void *consumer_index)
 	return NULL;
 }
 
-/* Ex3 - 2 --> FSQ + 2 mutex + 2 semaphore - one thread of each type at a time */
-
-/*->start producer binary semaphore*/
-/*->start consumer semaphore from 0*/
-
-/*->declare pthread_mutex_t g_lock*/
-/*->declare pthread_mutex_t g_lock2*/
-
-/*main()*/
-/*	->create declared queue*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutexes*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy queue*/
-/*	->destroy mutexes*/
-
-/*	->return success*/
-
-
-/*write()*/
-/*	->producer counting semaphore wait*/
-/*	->lock producer mutex*/
-/*	->write index of thread to queue*/
-/*	->unlock producer mutex*/
-/*	->consumer semaphore post*/
-/*	->return*/
-
-
-/*read()*/
-/*	->consumer semaphore wait*/
-/*	->lock consumer mutex*/
-/*	->read from queue*/
-/*	->pop*/
-/*	->unlock consumer mutex*/
-/*	->producer binary semaphore post*/
-/*	->return*/
-
 /*****************************************************************************/
-/* Ex4 */
 
 static test_status_t Ex4(void)
 {
@@ -1017,55 +812,7 @@ static void* ReadEx4(void *consumer_index)
 	return NULL;
 }
 
-/* ex4 - 1 --> 2 atomic counters, 1 mutex, 1 list */
-
-/*->CAPACITY*/
-
-/*->declare list*/
-
-/*->declare counters, start both with 0*/
-
-/*->declare pthread_mutex_t g_lock*/
-
-/*main()*/
-/*	->create declared list and nodes in advance*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutex*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy list*/
-/*	->destroy mutex*/
-
-/*	->return success*/
-
-/*write()*/
-/*	->g_lock mutex*/
-/*	->write in list (push or write in producer counter % CAPACITY if list is full)*/
-/*	->increase producer counter*/
-/*	->ung_lock mutex*/
-/*	->increase consumer counter*/
-/*	->return*/
-
-/*read()*/
-/*	->while (1)*/
-	/*	->g_lock mutex*/
-	/*	->if consumer counter is above 0*/
-		/*	->read from list (i.e pop)*/
-		/*	->decrease consumer counter*/
-		/*	->unlock mutex*/
-		/*	->decrease producer counter*/
-		/*	->return*/
-
 /*****************************************************************************/
-/* Ex4 - 2 */
 
 static test_status_t Ex4_2(void)
 {
@@ -1183,62 +930,7 @@ static void* ReadEx4_2(void *consumer_index)
 	return NULL;
 }
 
-
-/* ex4 - 2 --> FSQ, read_index, write_index, 2 mutex */
-
-/*->declare FSQ*/
-
-/*CAPACITY*/
-
-/*->write_index = 0*/
-
-/*->read_index = 0*/
-
-/*->declare pthread_mutex_t g_lock*/
-
-/*main()*/
-/*	->create declared queue*/
-/*	->create array of producers*/
-/*	->create array of consumers*/
-/*	->create mutexes*/
-
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-
-/*	->join all threads*/
-
-/*	->destroy queue*/
-/*	->destroy mutexes*/
-
-/*	->return success*/
-
-/*write()*/
-/*	->lock producer mutex*/	
-/*	->write in queue*/
-/*	->lock consumer mutex*/
-/*	->if is full*/
-/*		->pop*/
-/*		->write in queue*/
-/*	->unlock consumer mutex*/
-/*	->unlock producer mutex*/
-/*	->return*/
-
-/*read()*/
-/*	->lock producer mutex*/
-/*	->lock consumer mutex*/
-/*	->if is not empty*/
-	/*	->unlock producer mutex*/
-	/*	->read from queue*/
-/*	->else*/
-	/*	->unlock producer mutex*/
-/*	->unlock consumer mutex*/
-/*	->return*/
-
 /*****************************************************************************/
-/* Ex5 */
 
 static test_status_t Ex5(void)
 {
@@ -1359,144 +1051,5 @@ static void* ReadEx5(void *consumer_index)
 
 	return NULL;
 }
-
-/*
-->old inplementation
-
-static void* WriteEx5(void *param)
-{
-	size_t data = 0;
-
-	while (1)
-	{
-		ExitIfBad(0 == pthread_mutex_lock(&g_lock), 4, "Error");
-		*g_buffer_ex5 = data;
-		ExitIfBad(0 == semop(g_semid_ex5, &g_increment, 1), 14, "Error");
-		pthread_cond_broadcast(&g_cv_ex5);
-		while (0 != semctl(g_semid_ex5, 0, GETVAL))
-		{
-			pthread_cond_wait(&g_cv_ex5, &g_lock);
-		}
-		ExitIfBad(0 == pthread_mutex_unlock(&g_lock), 5, "Error");
-
-		fputs("producer released!\n", stdout);
-
-		++data;
-	} 
-
-	return NULL;
-}
-
-static void* ReadEx5(void *consumer_index)
-{
-	size_t data = 0;
-
-	while (1)
-	{
-		ExitIfBad(0 == pthread_mutex_lock(&g_lock), 4, "Error");
-		while (((size_t)consumer_index + 1) != semctl(g_semid_ex5, 0, GETVAL))
-		{
-			pthread_cond_wait(&g_cv_ex5, &g_lock);
-		}
-		data = *g_buffer_ex5;
-		ExitIfBad(0 == semop(g_semid_ex5, &g_decrement, 1), 14, "Error");
-		pthread_cond_broadcast(&g_cv_ex5);
-		ExitIfBad(0 == pthread_mutex_unlock(&g_lock), 5, "Error");
-
-		fprintf(stdout, "data %lu, was read by consumer %lu\n", 
-				data, (size_t)consumer_index);
-	}
-
-	return NULL;
-}
-*/
-
-/* ex5 --> producer 1 message, wait for all consumers to consume the message
-	1 conditional variable + 1 mutex + 1 semaphore */
-
-/*->start binary semaphore*/
-/*->declare pthread_mutex_t g_lock*/
-/*->declare conditional variable struct*/
-
-/*main()*/
-/*	->create producers*/
-/*	->create consumers*/
-/*	->create mutex*/
-/*	->initialize semaphore values*/
-/*	->initialize conditional variable struct (g_buffer will have only 1 space)*/
-		
-/*	->for 'i' < NUM_OF_PAIRS*/
-/*		->create producer[i] thread, send i*/
-/*		->check if success*/
-/*		->create consumer[i] thread, send i*/
-/*		->check if success*/
-	
-/*	->join all threads*/
-	
-/*	->destroy mutex*/
-
-/*	->return success*/
-
-/*write()*/
-/*	->while (1)*/
-/*		->come in the store*/
-/*		->lock door*/
-/*		->produce*/
-/*		->tell all consumers they can come in*/
-/*		->wait until they consume*/
-/*		->leave the store*/
-		
-/*read()*/
-/*	->while (1)*/
-/*		->wait for producer's signal*/
-/*		->wait in line*/
-/*		->come in*/
-/*		->consume*/
-/*		->tell next consumer he can come in*/
-
-
-/****************/
-/*write()*/
-/*	->while (1)*/
-/*		->lock mutex (enter the store)*/
-/*		->write in buffer (produce)*/
-/*		->increase semaphore to number of consumers*/
-/*		->broadcast, so they should know they can come in*/
-/*		->wait in a 'cv', until semaphore is 0 (i.e wait for all consumers to consume)*/
-/*		->unlock mutex (leave the store)*/
-/*		->increase data (create new product)*/
-		
-/*read()*/
-/*	->while (1)*/
-/*		->lock mutex (enter the store)*/
-/*		->wait in a 'cv' until semaphore is consumer_index + 1 
-									(i.e until it reached the consumer's turn)*/
-/*		->read from buffer (consume)*/
-/*		->decrease semaphore's value*/
-/*		->broadcast, so the next consumer can consume*/
-/*		->unlock mutex (leave the store)*/
-
-/****************/
-/*->new pseudo-code:*/
-
-/*write()*/
-/*	->while (1)*/
-/*		->wait for semaphore's value to be at least num_of_consumers and decrement*/
-/*		->lock mutex*/
-/*		->write in buffer (produce)*/
-/*		->broadcast to all consumers so they consume*/
-/*		->unlock mutex (leave the store)*/
-/*		->increase data (create new product)*/
-		
-/*read()*/
-/*	->while (1)*/
-/*		->lock mutex (enter the store)*/
-/*		->increase semaphore by 1*/
-/*		->wait in a 'cv' until producer broadcasts */
-/*		->unlock mutex (leave the store)*/
-/*		->read from buffer (consume)*/
-/*		->printf, i.e use product*/
-
-
 
 /*****************************************************************************/

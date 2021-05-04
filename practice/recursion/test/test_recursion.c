@@ -1,13 +1,12 @@
 /****************************************************************************
-Title: Recursion - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer:
+Title: Recursion
+Author: Aviv Illoz
 Description: Recursion Test API
 *****************************************************************************/
 
 #include <stdio.h>	/* printf */
 #include <stdlib.h>	/* malloc */
+
 #include "recursion.h"	/* api */
 
 #define expect(x)	if (!(x))\
@@ -210,5 +209,3 @@ int main(void)
 
 	return 0;
 }
-
-

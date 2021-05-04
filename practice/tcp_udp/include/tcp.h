@@ -1,10 +1,11 @@
 /*****************************************************************************
 Title: tcp 
+Author: aviv illoz
 Description: tcp api
 ******************************************************************************/
 
-#ifndef __ILRD_OL91_TCP_H__
-#define __ILRD_OL91_TCP_H__
+#ifndef __TCP_H__
+#define __TCP_H__
 
 #include "shared.h" /* macros and typedefs */
 
@@ -30,4 +31,4 @@ int TCPWaitForRequest(int sockfd, sockaddr_t *_addr);
 
 /*****************************************************************************/
 
-#endif /*__ILRD_OL91_TCP_H__*/
+#endif /*__TCP_H__*/

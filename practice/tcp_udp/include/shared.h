@@ -1,10 +1,11 @@
 /*****************************************************************************
 Title: shared
+Author: aviv illoz
 Description: shared api
 ******************************************************************************/
 
-#ifndef __ILRD_OL91_SHARED_H__
-#define __ILRD_OL91_SHARED_H__
+#ifndef __SHARED_H__
+#define __SHARED_H__
 
 #include <stdio.h> /* perror */
 #include <netdb.h> /* addrinfo and sockaddr structs */
@@ -80,5 +81,5 @@ int ReceiveMsg(int sockfd, char _buff[], size_t buff_size, sockaddr_t *_addr);
 
 /*****************************************************************************/
 
-#endif /*__ILRD_OL91_SHARED_H__*/
+#endif /*__SHARED_H__*/
 

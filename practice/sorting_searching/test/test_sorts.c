@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Sorts - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Igor
+Title: Sorts
+Author: Aviv Illoz
 Description: Sorts Test API
 *****************************************************************************/
 
