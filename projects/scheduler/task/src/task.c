@@ -1,13 +1,12 @@
 /****************************************************************************
-Title: Task - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer:
+Title: Task
+Author: Aviv Illoz
 Description: Task interface header file
 *****************************************************************************/
 
 #include <stdlib.h>	/* malloc */
 #include <assert.h>	/* assert */
+
 #include "task.h"	/* api */
 #include "uid.h"	/* API for UID */
 

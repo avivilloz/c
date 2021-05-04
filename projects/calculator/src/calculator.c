@@ -1,14 +1,13 @@
 /****************************************************************************
-Title: Calculator - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Miriam
+Title: Calculator
+Author: Aviv Illoz
 Description: Calculator Interface
 *****************************************************************************/
 
 #include <stdlib.h>	/* malloc */
 #include <assert.h>	/* assert */
 #include <string.h>	/* strlen */
+
 #include "calculator.h"	/* api */
 #include "stack.h"	/* api */
 
@@ -639,6 +638,3 @@ static calc_status_t PerformOperation(
 }
 
 /*****************************************************************************/
-
-
-

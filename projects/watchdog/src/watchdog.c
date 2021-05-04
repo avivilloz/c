@@ -1,6 +1,6 @@
 /*****************************************************************************
-Title: Watchdog - Infinity Labs R&D 
-Group: OL91
+Title: Watchdog
+Author: Aviv Illoz
 Description: Watchdog program for ressucitating client
 ******************************************************************************/
 

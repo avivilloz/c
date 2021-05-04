@@ -1,13 +1,12 @@
 /****************************************************************************
-Title: Variable Size Allocator - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Miriam
+Title: Variable Size Allocator
+Author: Aviv Illoz
 Description: Variable Size memory Allocator
 *****************************************************************************/
 
 #include <stdio.h>	/* printf */
 #include <stdlib.h>	/* malloc */
+
 #include "vsa.h"	/* api */
 
 int main(void)

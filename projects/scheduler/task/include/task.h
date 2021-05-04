@@ -1,11 +1,12 @@
 /****************************************************************************
-Title: Task - Infinity Labs R&D 
-Group: Ol91
+Title: Task
+Author: Aviv Illoz
 Description: Task interface header file
 *****************************************************************************/
 
-#ifndef __TASK_INFITY_OL_91__
-#define __TASK_INFITY_OL_91__ 
+#ifndef __TASK_H__
+#define __TASK_H__ 
+
 #include "uid.h"	/* API for UID */
 
 typedef struct task task_t;
@@ -72,13 +73,4 @@ void TaskUpdateTime(task_t *task);
 
 void TaskSetTime(task_t *task, time_t time_to_set);
 
-#endif /*__TASK_INFITY_OL_91*/
-
-
-
-
-
-
-
-
-
+#endif /*__TASK_H__*/

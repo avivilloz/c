@@ -1,7 +1,7 @@
 /****************************************************************************
-Title: Scheduler Logger
-Author: Aviv
-Description: Scheduler Logger interface
+Title: Scheduler Creator
+Author: Aviv Illoz
+Description: Scheduler Creator
 *****************************************************************************/
 
 #include <stdio.h>		/* printf */
@@ -763,5 +763,3 @@ scheduler_t *SchedStructToScheduler(scheduler_struct_t *sched_struct)
 
 	return sched_struct->scheduler;
 }
-
-

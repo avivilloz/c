@@ -1,7 +1,7 @@
 /****************************************************************************
-Title: Scheduler Logger
-Author: Aviv
-Description: Scheduler Logger interface
+Title: Scheduler Creator
+Author: Aviv Illoz
+Description: Scheduler Creator
 *****************************************************************************/
 
 #include <stdio.h>		/* printf */
@@ -95,6 +95,3 @@ int CurrTime(void *params)
 
 	return FOREVER;
 }
-
-
-

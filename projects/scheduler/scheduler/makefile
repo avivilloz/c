@@ -5,14 +5,14 @@ DEBUG_FLAGS=-ansi -pedantic-errors -Wall -Wextra -g
 RELEASE_FLAGS=-ansi -pedantic-errors -Wall -Wextra -DNDEBUG -O3
 
 #add relative path for external libraries if needed
-INCLUDES=-I include/ -I ../uid/include/ -I ../task/include/ -I ../dlist/include/ -I ../sorted_list/include/ -I ../pq/include/
+INCLUDES=-I include/ -I ../uid/include/ -I ../task/include/ -I ~/projects/c/data_structures/dlist/include/ -I ~/projects/c/data_structures/sorted_list/include/ -I ~/projects/c/data_structures/pq/include/
 #add absolute path for external libraries if needed
 SHARED_LIBRARIES=-L$(realpath .)/lib -Wl,-rpath=$(realpath .)/lib -L~/git/ds/uid/lib -Wl,-rpath=~/git/ds/uid/lib -L~/git/ds/task/lib -Wl,-rpath=~/git/ds/task/lib -L~/git/ds/dlist/lib -Wl,-rpath=~/git/ds/dlist/lib -L~/git/ds/sorted_list/lib -Wl,-rpath=~/git/ds/sorted_list/lib -L~/git/ds/pq/lib -Wl,-rpath=~/git/ds/pq/lib
 
 SRC=$(wildcard src/*.c)
 OBJ=$(addprefix obj/,$(notdir $(SRC:.c=.o)))
 #add relative path for external libraries if needed
-LIBS=lib/lib$(NAME).so ../uid/lib/libuid.so ../task/lib/libtask.so ../pq/lib/libpq.so  ../sorted_list/lib/libsorted_list.so ../dlist/lib/libdlist.so
+LIBS=lib/lib$(NAME).so ../uid/lib/libuid.so ../task/lib/libtask.so ~/projects/c/data_structures/pq/lib/libpq.so  ~/projects/c/data_structures/sorted_list/lib/libsorted_list.so ~/projects/c/data_structures/dlist/lib/libdlist.so
 
 #for running
 VLG_FLAGS=--leak-check=yes --track-origins=yes

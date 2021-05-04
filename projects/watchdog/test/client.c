@@ -1,6 +1,6 @@
 /*****************************************************************************
-Title: Client - Infinity Labs R&D 
-Group: OL91
+Title: Client
+Author: Aviv Illoz
 Description: Client
 ******************************************************************************/
 
@@ -56,5 +56,3 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
-
-

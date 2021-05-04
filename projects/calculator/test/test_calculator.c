@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Calculator - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer:
+Title: Calculator
+Author: Aviv Illoz
 Description: Calculator Test API
 *****************************************************************************/
 
@@ -116,5 +114,3 @@ int main(void)
 
 	return 0;
 }
-
-

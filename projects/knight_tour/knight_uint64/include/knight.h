@@ -1,11 +1,11 @@
 /******************************************************************************
-Title: Knight Tour - Infinity Labs R&D 
-Group: OL91
-Description: Knight Tour API v2
+Title: Knight Tour
+Author: Aviv Illoz
+Description: Knight Tour API v3
 *****************************************************************************/
 
-#ifndef __KNIGHT_TOUR_ILRD_OL91__
-#define __KNIGHT_TOUR_ILRD_OL91__
+#ifndef __KNIGHT_TOUR_H__
+#define __KNIGHT_TOUR_H__
 
 #include <stddef.h> /* size_t */
 
@@ -55,5 +55,4 @@ void PrintResultPath(int result[BOARD_SIZE]);
 
 /*****************************************************************************/
 
-
-#endif /* __KNIGHT_TOUR_ILRD_OL91__ */
+#endif /* __KNIGHT_TOUR_H__ */

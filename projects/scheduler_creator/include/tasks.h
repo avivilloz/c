@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Scheduler Logger
-Author: Aviv
-Description: Scheduler Logger interface
+Title: Tasks
+Author: Aviv Illoz
+Description: Tasks Interface
 *****************************************************************************/
 
-#ifndef	_TASKS_
-#define	_TASKS_
+#ifndef	__TASKS_H__
+#define	__TASKS_H__
 
 /*****************************************************************************/
 
@@ -56,4 +56,4 @@ int CurrTime(void *params);
 
 /*****************************************************************************/
 
-#endif	/*_TASKS_*/
+#endif	/*__TASKS_H__*/

@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: Knight Tour - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Sofia
+Title: Knight Tour
+Author: Aviv Illoz
 Description: Knight Tour Test API
 ******************************************************************************/
 
@@ -77,5 +75,3 @@ int main(void)
 
 	return 0;
 }
-
-

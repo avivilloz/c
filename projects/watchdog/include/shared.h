@@ -1,6 +1,6 @@
 /*****************************************************************************
-Title: Shared - Infinity Labs R&D 
-Group: OL91
+Title: Shared
+Author: Aviv Illoz
 Description: Shared between client and watchdog
 ******************************************************************************/
 

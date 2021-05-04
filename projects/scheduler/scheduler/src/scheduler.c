@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: Scheduler - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Sofia
+Title: Scheduler 
+Author: Aviv Illoz
 Description: Scheduler interface header file
 *****************************************************************************/
 

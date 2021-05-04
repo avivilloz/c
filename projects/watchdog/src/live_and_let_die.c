@@ -1,7 +1,7 @@
 /*****************************************************************************
-Title: Live Or Let Die - Infinity Labs R&D 
-Group: OL91
-Description: Live Or Let Die API
+Title: Live and Let Die
+Author: Aviv Illoz
+Description: Live and Let Die API
 ******************************************************************************/
 
 #define _POSIX_C_SOURCE 200809L /* sigaction */

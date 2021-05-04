@@ -1,11 +1,11 @@
 /*****************************************************************************
-Title: ext2 - Infinity Labs R&D 
-Group: OL91
+Title: ext2
+Author: Aviv Illoz
 Description: ext2 API
 ******************************************************************************/
 
-#ifndef __ILRD_OL91_EXT2__
-#define __ILRD_OL91_EXT2__
+#ifndef __EXT2_H__
+#define __EXT2_H__
 
 /*****************************************************************************/
 /*
@@ -20,5 +20,4 @@ void PrintFileInfo(const char *device_path, const char *file_path);
 
 /*****************************************************************************/
 
-#endif /*__ILRD_OL91_EXT2__*/
-
+#endif /*__EXT2_H__*/

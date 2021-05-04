@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Calculator - Infinity Labs R&D 
-Group: Ol91
+Title: Calculator
+Author: Aviv Illoz
 Description: Calculator API
 *****************************************************************************/
 
-#ifndef __CALCULATOR_INFITY_OL_91__
-#define __CALCULATOR_INFITY_OL_91__
+#ifndef __CALCULATOR_H__
+#define __CALCULATOR_H__
 
 typedef enum {SUCCESS, SYS_ERROR, MATH_ERROR, SYNTAX_ERROR} calc_status_t;
 
@@ -32,4 +32,4 @@ ERRORS:
 
 calc_status_t Calculator(const char *input, double *_result);
 
-#endif /*__CALCULATOR_INFITY_OL_91__*/
+#endif /*__CALCULATOR_H__*/

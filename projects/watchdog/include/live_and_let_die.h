@@ -1,19 +1,18 @@
 /*****************************************************************************
-Title: Live Or Let Die - Infinity Labs R&D 
-Group: OL91
-Description: Live Or Let Die API
+Title: Live and Let Die
+Author: Aviv Illoz
+Description: Live and Let Die API
 ******************************************************************************/
 
-#ifndef __LIVE_OR_LET_DIE_ILRD_OL91__
-#define __LIVE_OR_LET_DIE_ILRD_OL91__
+#ifndef __LIVE_AND_LET_DIE_H__
+#define __LIVE_AND_LET_DIE_H__
 
 /*****************************************************************************/
 
-int KeepMeAlive(int argc, char *argv[]);
+int KeepAlive(int argc, char *argv[]);
 
-int LetMeDie(void);
+int LetDie(void);
 
 /*****************************************************************************/
 
-#endif /*__LIVE_OR_LET_DIE_ILRD_OL91__*/
-
+#endif /*__LIVE_AND_LET_DIE_H__*/

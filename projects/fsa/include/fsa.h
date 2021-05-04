@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Memory Management - Infinity Labs R&D 
-Group: Ol91
+Title: Memory Management
+Author: Aviv Illoz
 Description: Fixed size memory allocator
 *****************************************************************************/
 
-#ifndef __FIXED_SIZE_MEM_ALLOC_INFITY_OL_91__
-#define __FIXED_SIZE_MEM_ALLOC_INFITY_OL_91__
+#ifndef __FIXED_SIZE_MEM_ALLOC_H__
+#define __FIXED_SIZE_MEM_ALLOC_H__
 
 #include <stddef.h> 	/* size_t*/
 
@@ -61,6 +61,4 @@ Error proccessing: 	-
 */
 size_t FSACountFree(const fsa_t *allocator);
 
-
-
-#endif /*__FIXED_SIZE_MEM_ALLOC_INFITY_OL_91__*/
+#endif /*__FIXED_SIZE_MEM_ALLOC_H__*/

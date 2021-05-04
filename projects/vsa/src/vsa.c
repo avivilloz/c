@@ -1,13 +1,13 @@
 /****************************************************************************
-Title: Variable Size Allocator - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Miriam
+Title: Variable Size Allocator
+Author: Aviv Illoz
 Description: Variable Size memory Allocator
 *****************************************************************************/
 
 #include <assert.h>	/* assert */
+
 #include "vsa.h"	/* api */
+
 #define WORD_SIZE sizeof(size_t)
 #define VSA_HEAD_SIZE sizeof(vsa_t)
 #define VSA_BLOCK_HEADER_SIZE sizeof(vsa_block_header_t)
@@ -303,6 +303,3 @@ size_t VSALargestChunkAvailable(const vsa_t *allocator)
 
 	return chunk;
 }
-
-
-

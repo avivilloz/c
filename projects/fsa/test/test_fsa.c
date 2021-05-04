@@ -1,14 +1,14 @@
 /****************************************************************************
-Title: Memory Management - Infinity Labs R&D 
-Group: Ol91
-Author:	Aviv
-Reviewer: Ezequiel
+Title: Memory Management
+Author:	Aviv Illoz
 Description: Fixed size memory allocator
 *****************************************************************************/
 
 #include <stdio.h>	/* printf */
 #include <stdlib.h>	/* malloc, free */
+
 #include "fsa.h"	/* api */
+
 #define NUMBER_BLOCKS 50
 #define BLOCK_SIZE 50
 
@@ -41,5 +41,3 @@ int main(void)
 	
 	return 0;
 }
-
-

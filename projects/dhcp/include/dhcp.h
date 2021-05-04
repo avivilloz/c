@@ -1,11 +1,11 @@
 /******************************************************************************
-Title: DHCP - Infinity Labs R&D 
-Group: Ol91
+Title: DHCP
+Author: Aviv Illoz
 Description: DHCP interface
 ******************************************************************************/
 
-#ifndef __DHCP_ILRD_OL91__
-#define __DHCP_ILRD_OL91__
+#ifndef __DHCP_H__
+#define __DHCP_H__
 
 #include <stddef.h> /* size_t */
 
@@ -83,4 +83,4 @@ Time complexity:    O(n)
 */
 size_t DhcpCountFree(const dhcp_t *dhcp);
 
-#endif /* __DHCP_ILRD_OL91__ */
+#endif /* __DHCP_H__ */

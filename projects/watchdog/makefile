@@ -15,7 +15,7 @@ CLIENT=bin/client.out
 
 WATCHDOG_SRC=src/watchdog.c
 
-CLIENT_SRC=src/live_or_let_die.c test/client.c
+CLIENT_SRC=src/live_and_let_die.c test/client.c
 
 ###############################################################################
 

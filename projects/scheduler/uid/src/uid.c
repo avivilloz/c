@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: UID - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Sofia
+Title: UID
+Author: Aviv Illoz
 Description: UID
 ****************************************************************************/
 

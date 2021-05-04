@@ -1,11 +1,12 @@
 /****************************************************************************
-Title: Scheduler Logger
-Author: Aviv
-Description: Scheduler Logger interface
+Title: Scheduler Creator
+Author: Aviv Illoz
+Description: Scheduler Creator Interface
 *****************************************************************************/
 
-#ifndef _SCHEDULER_CREATOR_
-#define _SCHEDULER_CREATOR_
+#ifndef __SCHEDULER_CREATOR_H__
+#define __SCHEDULER_CREATOR_H__
+
 #include "scheduler.h"		/* api */
 
 /*****************************************************************************/
@@ -59,4 +60,4 @@ scheduler_t *SchedStructToScheduler(scheduler_struct_t *sched_struct);
 
 /*****************************************************************************/
 
-#endif /*_SCHEDULER_CREATOR_*/
+#endif /*__SCHEDULER_CREATOR_H__*/

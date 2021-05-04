@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Variable Size Allocator - Infinity Labs R&D 
-Group: OL91
+Title: Variable Size Allocator
+Author: Aviv Illoz
 Description: Variable Size memory Allocator
 *****************************************************************************/
 
-#ifndef __VARIABLE_SIZE_MEM_ALLOC_INFITY_OL_91__
-#define __VARIABLE_SIZE_MEM_ALLOC_INFITY_OL_91__
+#ifndef __VARIABLE_SIZE_MEM_ALLOC_H__
+#define __VARIABLE_SIZE_MEM_ALLOC_H__
 
 #include <stddef.h> /* size_t */
 
@@ -52,4 +52,4 @@ Error proccessing: 	-
 
 size_t VSALargestChunkAvailable(const vsa_t *allocator);
 
-#endif /*__VARIABLE_SIZE_MEM_ALLOC_INFITY_OL_91__*/
+#endif /*__VARIABLE_SIZE_MEM_ALLOC_H__*/

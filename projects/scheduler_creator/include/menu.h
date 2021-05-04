@@ -1,7 +1,7 @@
 /****************************************************************************
-Title: menu
-Author: Aviv
-Description: menu interface
+Title: Menu
+Author: Aviv Illoz
+Description: Menu Interface
 *****************************************************************************/
 
 #ifndef _MENU_H_

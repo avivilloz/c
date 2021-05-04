@@ -1,7 +1,7 @@
 /****************************************************************************
-Title: Logger
-Author: Aviv
-Description: Logger interface
+Title: Menu	
+Author: Aviv Illoz
+Description: Menu 
 *****************************************************************************/
 
 #include <stdio.h>	/* printf */
@@ -55,4 +55,3 @@ int Return(void)
 {
 	return EXIT;
 }
-

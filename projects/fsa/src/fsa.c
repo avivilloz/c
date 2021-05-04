@@ -1,13 +1,13 @@
 /****************************************************************************
-Title: Memory Management - Infinity Labs R&D 
-Group: Ol91
-Author:	Aviv
-Reviewer: Ezequiel
+Title: Memory Management
+Author:	Aviv Illoz
 Description: Fixed size memory allocator
 *****************************************************************************/
 
 #include <assert.h>	/* assert */
+
 #include "fsa.h"	/* api */
+
 #define WORD_SIZE sizeof(size_t)
 
 struct fsa
@@ -140,5 +140,3 @@ size_t FSACountFree(const fsa_t *allocator)
 
 	return allocator->free_blocks;
 }
-
-

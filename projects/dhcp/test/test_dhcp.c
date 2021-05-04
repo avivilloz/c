@@ -1,8 +1,6 @@
 /*****************************************************************************
-Title: DHCP - Infinity Labs R&D 
-Group: OL91
-Author: Aviv
-Reviewer: Sebastian
+Title: DHCP
+Author: Aviv Illoz
 Description: DHCP Test API
 ******************************************************************************/
 
@@ -228,5 +226,3 @@ int main(void)
 
 	return 0;
 }
-
-

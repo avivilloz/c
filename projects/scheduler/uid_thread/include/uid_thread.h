@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: UID (thread-safe) - Infinity Labs R&D 
-Group: Ol91
+Title: UID (thread-safe)
+Author: Aviv Illoz
 Description: UID (thread-safe)
 ****************************************************************************/
 
-#ifndef __UID_H_ILRD_OL91__
-#define __UID_H_ILRD_OL91__
+#ifndef __UID_H__
+#define __UID_H__
 
 #include <sys/types.h>	/* pid_t */
 
@@ -42,4 +42,4 @@ int UIDIsSame(ilrd_uid_t lhs, ilrd_uid_t rhs);
 
 /*****************************************************************************/
 
-#endif /*__UID_H_ILRD_OL91__*/
+#endif /*__UID_H__*/

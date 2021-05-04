@@ -1,8 +1,6 @@
 /****************************************************************************
-Title: UID (thread-safe) - Infinity Labs R&D 
-Group: Ol91
-Author: Aviv
-Reviewer: Nour
+Title: UID (thread-safe)
+Author: Aviv Illoz
 Description: UID
 ****************************************************************************/
 

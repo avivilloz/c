@@ -1,11 +1,11 @@
 /****************************************************************************
-Title: Scheduler - Infinity Labs R&D 
-Group: Ol91
+Title: Scheduler
+Author: Aviv Illoz
 Description: Scheduler interface header file
 *****************************************************************************/
 
-#ifndef __SCHEDULER_INFITY_OL_91__
-#define __SCHEDULER_INFITY_OL_91__
+#ifndef __SCHEDULER_H__
+#define __SCHEDULER_H__
 
 #include <time.h>   	/* time_t */
 #include <stddef.h> 	/* size_t */
@@ -131,4 +131,4 @@ int SchedulerRun(scheduler_t *scheduler);
 
 pq_t *SchedulerToQueue(scheduler_t *scheduler);
 
-#endif /*__SCHEDULER_INFITY_OL_91*/
+#endif /*__SCHEDULER_H__*/
