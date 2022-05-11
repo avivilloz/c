@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+
+complex
+
+-------------------------------------------------------------------------------
+questions
+-------------------------------------------------------------------------------
+
+    1-when would you prefer to return by value / return by &?
+    2-when would you refer to return by value / const value?
+    3-when woud you prefer to pass parameter by value / const reference?
+    4-what is the difference between compound assignment operator vs operator?
+    5-when would you use an inline member function?
+
+    answers:
+    1-
+
+-------------------------------------------------------------------------------
+requirements
+-------------------------------------------------------------------------------
+--create a class of complex numbers that behaves like numerics. support the 
+--following functionalities:
+
+    -
+    +
+    *
+    /
+    ==
+    !=
+    cin >>
+    cout <<
+    set real
+    set imaginary
+    get real
+    get imaginary
+    
+-------------------------------------------------------------------------------
+implementation note
+-------------------------------------------------------------------------------
+
+    1-don't spend more than 15 minutes on how to actually implement division and 
+multiplication. if 15 minutes have passed and you still didn't get it, just return 
+(7,7), as this part is optional.
+
+-------------------------------------------------------------------------------
+questions after implementation
+-------------------------------------------------------------------------------
+
+    1-benchmark (by value vs. by reference) 100k actions of operator + (use time).
+    2-now with -O. why the difference. 
+
+-------------------------------------------------------------------------------

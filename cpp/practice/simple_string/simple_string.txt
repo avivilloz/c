@@ -1,0 +1,129 @@
+-------------------------------------------------------------------------------
+
+SIMPLE STRING
+
+-------------------------------------------------------------------------------
+keywords
+-------------------------------------------------------------------------------
+
+    1-wrapper class:
+    2-resource management class:
+    3-rule of three:
+
+    answers:
+    1-"wrapper classes" wrap primitive values in a class and offers utility to access them 
+through objects. a "wrapper class" is a de facto term meaning a class that "wraps around" 
+a resource; i.e, that manages the resource. all resources should be wrapped in some fashion, 
+for cleanliness (no explicit clean up code or noise) and correctness (destructor is guaranteed 
+to run; cannot forget to clean up, and safe with exceptions).
+    2-every time an object is created a constructor is called; and when that object goes out of 
+scope a destructor is called. The constructor/destructor pair can be used to create an object 
+that automatically allocates and initialises another object (known as the managed object) and 
+cleans up the managed object when it (the manager) goes out of scope. This mechanism is 
+generically referred to as resource management. 
+    3-if you need to explicitly declare either the destructor, copy constructor or copy 
+assignment operator yourself, you probably need to explicitly declare all three of them.
+
+-------------------------------------------------------------------------------
+requirements
+-------------------------------------------------------------------------------
+
+--Create a class String which will have the following structure:
+
+class String
+{
+public:
+    //???
+private:
+    char *m_cstr;
+};
+
+    -the class should be able to give the following functionalities:
+
+String s1("hello");
+String s2(s1);
+s1 = s2;
+s1.Lenght();
+s1.CStr(); // return m_cstr
+
+-------------------------------------------------------------------------------
+notes
+-------------------------------------------------------------------------------
+
+--use valgrind to check for memory leaks.
+
+-------------------------------------------------------------------------------
+questions
+-------------------------------------------------------------------------------
+
+    1-what is the need for implementing String? why not use char*?
+    2-when should the ctor be explicit?
+    3-what are the compiler generated funcitons?
+    4-what is the difference between member and free functions?
+    5-do we need to use const member funcitons?
+    6-can we use strdup?
+    7-why do we need to implement dtor, ctor and assignment operator and not to use compiler
+generated versions?
+    8-explain the difference between using strcpy vs strlen + memcpy.
+    9-explain the difference between using new operator that throws vs a nothrow version
+    10-can we use the non-throwing operator new in constructors?
+
+    answers:
+    1-1st-because the simple meaning of char* is a pointer to a char type, strings
+deserve a type to themselves. 2nd-because in c++ we have the possibility of creating a
+wrapper class, where the type string can be managed, and for example, a feature could be
+developed in this wrapper, where a string can be simply assigned to another just like the
+(for example) the int type. and many other features to manage strings.
+    2-when we don't want that a simple assignment operator should activate the ctor. rather 
+we want it to be explicity activated, for example: A a = A(1);. and not: A a = 1; (where
+if we don't add the keyword "explicit", it would activate the ctor).
+    3-a default constructor, a copy constructor, a copy assignment operator, and 
+the destructor.
+    4-a member function is a function that is part of a class, and a free function
+is one that is outside of a class (usually inside of namespaces).
+    5-for getters, yes. in our case: Lenght and CStr.
+    6-no, because the functions in a class usually only manage one string at a time,
+i.e they don't provide general functions related to strings, like duplicating a string.
+maybe we could say that the ctor of a String class is sort of a strdup, where we send a
+const string to it and the ctor duplicates it, and this will be our class string.
+another reason we shouldn't use it, at leaset in the ctor, is because strdup returns
+null pointer, and since we cannot check the return value of ctors, we won't be able to know 
+if it failed or not. so here we use the operator "new" with throw exception. 
+    7-because the compiler is able to genarate ctors and cctors for strings,
+being that strings are not assigned to each other with simple assignment operators
+rather, they need to loop through every character of the string.
+    8-first the difference between strcpy and memcpy is that strcpy stop at the null 
+character, whereas memcpy copies the exact number of bytes sent. and that's why memcpy
+requires strlen to know the size of the string until the null character. strcpy would take
+less time and memory, since it has to go through the string only once, whereas memcpy
+plus strlen need to go 2 times through the string.
+    9-throws means that if new operator fails to allocate memory, it throws an exception
+(bad_alloc), and nothrow (could be added in new like this: int i = new(std::nothrow) int[...])
+means that new operator will return null pointer in case it fails and not throw the exception.
+    10-no, because we cannot check if it failed.
+
+-------------------------------------------------------------------------------
+more questions
+-------------------------------------------------------------------------------
+
+    1-do item 26 from the C++ intro worsheet, and add the additional functionality to 
+your string 
+
+cout << s1 << endl;
+s1 == s2;
+"123" == s1;
+s1 > s2;
+s1 < s2;
+
+    2-can you also add support for the following functionality?
+
+const char *s1 = "hello";
+const char *s2 = "hi";
+
+s1 == s2;
+
+    answers:
+    1-👌️.
+    2-no, because non of the variables are members from String class or from another class.
+
+-------------------------------------------------------------------------------

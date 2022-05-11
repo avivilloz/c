@@ -1,0 +1,10 @@
+nbd_file=/dev/nbd14
+nbd_size=134217728
+num_of_threads=12
+dlls_dir=./_dlls/
+reschedule_delay=10
+attempts_limit=3
+minion0=./_storages/storage0/file
+minion1=./_storages/storage1/file
+minion2=./_storages/storage2/file
+minion3=./_storages/storage3/file

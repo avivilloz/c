@@ -1,0 +1,96 @@
+-------------------------------------------------------------------------------
+
+rc_string
+
+-------------------------------------------------------------------------------
+goals
+-------------------------------------------------------------------------------
+--familiarize with raw memory menagement in c++ and reference counting
+implementations.
+--practice writing exception safe code.
+-------------------------------------------------------------------------------
+keywords
+-------------------------------------------------------------------------------
+    1-copy on write
+    2-RAII
+    3-operator new
+    4-new operator
+    5-offsetof
+
+    answers:
+    1-is a resource-management technique used in computer programming to 
+efficiently implement a "duplicate" or "copy" operation on modifiable resources
+    2-is a C++ programming technique which binds the life cycle of a resource 
+that must be acquired before use (allocated heap memory, thread of execution, 
+open socket, open file, locked mutex, disk space, database connection—anything 
+that exists in limited supply) to the lifetime of an object. 
+    3-Operator new is a function that allocates raw memory and conceptually a 
+bit similar to malloc().
+    4-The new operator is an operator which denotes a request for memory 
+allocation on the Heap.
+    5-The macro offsetof expands to an integral constant expression of type 
+std::size_t, the value of which is the offset, in bytes, from the beginning of 
+an object of specified type to its specified subobject, including padding if any.
+-------------------------------------------------------------------------------
+motivation
+-------------------------------------------------------------------------------
+--look at this code:
+String foo(String s_)
+{
+    String s2(s_)
+    return s2;
+}
+
+int main()
+{
+    String str1 = "123";
+    String str2;
+    str2 = foo(str1);
+}
+
+    -how many copies of "123" were allocated copied and deallocated?
+count them.
+
+    answer:
+    -1 time when str1 was defined, 1 time when it was passed by value to
+the function foo, 1 time when s2 was defined in function foo, 1 time when it
+was copied to str2. -----> 4 times.
+
+-------------------------------------------------------------------------------
+requirements
+-------------------------------------------------------------------------------
+    1-supports all existing features os string
+    2-support implicit conversions from char*. should we? why?
+    3-should we support conversion from RCString to char *? why?
+    4-optimizes copy behaviour to save allocations in copy and 
+assignment
+    5-since the implementation will probably rely on the assumption
+that sizeof(char)==1
+    -protect customers whose platforms do not support the assumption
+-------------------------------------------------------------------------------
+quesitons
+-------------------------------------------------------------------------------
+    1-what are the different ways to implement reference counting? 
+what are their advantages/disadvantages?
+    2-describe what is RAII.
+    3-what is the difference between operator new and the new opeator?
+
+    answers:
+    1-Weighted reference counting, Indirect reference counting.
+    2-described in keywords.
+    3-described in keywords.
+
+-------------------------------------------------------------------------------
+implementation
+-------------------------------------------------------------------------------
+    -excepetion safe code
+    -copy on write
+    -minimize indirections and allocation
+    -if implementing using a struct for the reference counting and
+string.
+        *allocate raw memory using operator new
+        *use offsetof
+            #why can we use offset in this case?
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
