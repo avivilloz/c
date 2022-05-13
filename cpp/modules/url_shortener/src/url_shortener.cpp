@@ -9,7 +9,6 @@
 #include <string> // std::string
 #include <algorithm> // std::reverse
 #include <boost/thread/mutex.hpp> // boost::mutex::scoped_lock
-#include <algorithm> // std::find
 
 #include "url_shortener.hpp" // api
 #include "runtime_config.hpp" // RuntimeConfig
@@ -40,12 +39,9 @@ void Storage::ReadAll(std::vector<std::string> &urls)
 }
 
 const std::string UrlShortener::s_pathToStorage(GetPathToStorage());
-
 const std::string UrlShortener::s_rawUrl(GetRawUrl());
-
 const std::string UrlShortener::s_charsMap( 
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"); 
-
 const std::size_t UrlShortener::s_base = s_charsMap.length();
 
 UrlShortener::UrlShortener()
